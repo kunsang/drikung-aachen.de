@@ -1,0 +1,795 @@
+@charset "UTF-8";
+
+:root {
+--fontSize: 1rem;
+--mainColor: #12345678;
+--highlightColor: hwb(50, 90%, 0%);
+--blue: hsl(202, 100%, 23%);
+--red: hsl(358, 85%, 52%);
+}
+
+html {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+/*
+  Home
+
+*/
+
+.home .entry-title {display: none}
+
+.home blockquote {
+  margin: 0 0 2em;
+  padding: 1em;
+  background:  var(--highlightColor);
+}
+.home blockquote p {
+  margin: 0;
+  font-style: normal;
+}
+
+.home blockquote:before {
+  display: none;
+}
+
+/*
+  Header
+
+*/
+
+#header {
+  margin: 0;
+  padding: 30px 0 0;
+}
+
+#custom-header {
+  display: inline-block;
+  margin: 0 0 0 8px;
+  vertical-align: top;
+  font-size: 36px;
+  font-weight: 300;
+  text-indent: 0;
+  line-height: 1;
+  overflow: hidden;
+  z-index: 8;
+}
+
+#hung {
+  margin-top: -6px;
+}
+
+h1#custom-header a {
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+  h1#custom-header a:hover {
+    /*color: color(var(--blue) whiteness(+20%));*/
+    opacity: .8;
+    text-decoration: none;
+  }
+
+span#header-desc {
+  font-size: 18px;
+  top: -1em;
+  position: relative;
+  color: var(--blue);
+}
+
+span.first-word {
+  font-weight: 400;
+  color: rgb(237, 28, 36);
+}
+
+/*
+  Navigation
+
+*/
+
+@media only screen and (min-width: 768px) {
+  #navigation .menus.nav-icons-1 .side-nav {
+    width: auto;
+  }
+}
+
+#navigation {margin-bottom: 24px}
+
+/*
+  Typograpghy
+
+*/
+
+h1.title {
+  padding: 10px 0 0;
+}
+
+blockquote {
+  color: #444;
+  font-size: 1.2em;
+  padding: 0px 20px 0px 10px;
+}
+
+.page .container > .row {
+  margin-top: -50px !important;
+}
+
+.btn:hover, .reply a:hover, #searchsubmit:hover, #prevLink a:hover, #nextLink a:hover, .more-link:hover, #submit:hover, #comments #respond input#submit:hover, .container .gform_wrapper input.button:hover {
+  background: #30307c;
+}
+
+blockquote {
+  font-size: 1em;
+  line-height: 1.6;
+  margin: 10px;
+  padding: 0px 10px;
+}
+
+.entry ol {
+  overflow: visible;
+}
+
+hr {
+  clear: both;
+}
+
+/*
+  Tables
+
+*/
+
+table td {
+  padding: 0 1em 1em;
+  margin: 0px;
+  border: none;
+  vertical-align: top;
+}
+
+table p {
+  line-height: 1.5;
+}
+
+/*
+  Images
+
+*/
+
+.entry img.noborder {
+  border: 0;
+}
+
+/*
+  Content Views
+
+*/
+
+.pagination > li > a, .pagination > li > span {
+  cursor: pointer;
+}
+
+.pt-cv-grid .pt-cv-1-col > p {
+  margin: 0 !important;
+  padding: 0;
+}
+
+.home .pt-cv-grid .pt-cv-1-col > a {
+  width: 300px;
+  height: 150px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.home .pt-cv-grid .pt-cv-1-col > a img {
+  width:100%;
+  height: auto;
+}
+
+.home .pt-cv-grid .pt-cv-1-col > a {
+  background: url(images/default-slide.png) no-repeat;
+  background-size: cover;
+}
+
+.home a.pt-cv-readmore {
+  display: none;
+}
+
+.pt-cv-content-item > * {
+  margin-bottom: 0 !important;
+}
+
+.pt-cv-scrollable {
+  margin: 0;
+}
+
+.pt-cv-thumbnail {
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+ul.pt-cv-pagination {
+  padding: 0 !important;
+}
+
+.pt-cv-spinner {
+  top: 6px;
+  left: -20px;
+}
+
+/*  Slider
+*/
+
+.pt-cv-view .carousel-control {top: 50%}
+
+.carousel-caption .pt-cv-content {padding: 0}
+
+.pt-cv-view .carousel-indicators {display: none}
+
+.pt-cv-view .carousel-control.left {
+  left: 20px;
+  right: auto;
+}
+.pt-cv-view .carousel-control.right {right: 0}
+
+.pt-cv-view .carousel-caption {
+  bottom: 25px;
+}
+
+.carousel img {
+  border: 0;
+  padding: 0;
+}
+
+.pt-cv-view .carousel-control span {
+  background: hsl(208, 56%, 53%);
+}
+
+.pt-cv-view .carousel-control:hover span {
+  color: #FFF;
+  background: hsl(208, 57%, 33%);
+}
+
+/*
+  Google Maps Builder
+
+*/
+
+html .map-icon-art-gallery:before {
+  content: "";
+  display: inline-block ;
+  width: 32px;
+  height: 32px;
+  background: url(../../plugins/google-maps-builder/public/assets/img/default-marker.png) no-repeat;
+
+}
+
+html i.map-icon-art-gallery {
+  top: -4px !important;
+}
+
+/*
+  Posts
+
+*/
+
+
+
+/*
+  Sidebar
+
+*/
+
+#sidebar {
+  padding: 24px;
+  background: var(--highlightColor);
+}
+@media only screen and (min-width: 980px) {
+.two-col-left #main-sidebar-container #sidebar, .two-col-right #main-sidebar-container #sidebar {
+    padding: 24px;
+    width: 27%;
+  }
+}
+
+.widget {
+  clear: both;
+}
+
+.widget ul li a {
+  padding: 0;
+  line-height: 1em;
+  text-decoration: none;
+}
+
+.widget_wysija_cont {
+  margin-bottom: 6em;
+}
+.wysija-input {
+  float: left;
+  width: 50%;
+}
+.wysija-submit {
+  width: 35%;
+  height: 28px !important;
+  float: left;
+}
+.wysija-paragraph label {
+  margin: 11px !important;
+  position: absolute;
+}
+.widget_wysija_cont .wysija-submit {
+  margin-top: 2px;
+}
+a.button, a.comment-reply-link, #commentform #submit, .submit, input[type=submit], input.button, button.button, #wrapper .woo-sc-button {
+  line-height: 1;
+  text-transform: none;
+}
+
+
+/*  Sidebar Menu
+*/
+
+#sidebar ul.menu {
+  font-family: 'Signika', sans-serif;
+  list-style: none;
+}
+  #sidebar ul.menu li {
+    margin: 0;
+    width: 90%;
+  }
+  #sidebar ul.menu li a {
+    color: #ED1C24;
+  }
+
+#sidebar ul.menu li.first-level {
+  padding: 6px 0px 6px 30px;
+  background: var(--highlightColor) url(images/hung-list.png) no-repeat 6px 8px/20px;}
+
+#sidebar ul.menu li ul.sub-menu li ul.sub-menu li {
+  display: block;
+}
+
+#sidebar ul.menu li ul.sub-menu {
+  display: block !important;
+  visibility: visible !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+  margin-left: 1em;
+}
+
+#sidebar ul.menu li.sfHover a {
+  color: #ED1C24;
+}
+
+#sidebar ul.menu .sfHover .current_page_item a, .widget ul.menu .sfHover .current-menu-item a {
+  color: #690;
+  background: none;
+}
+
+/*
+  Glossary
+
+*/
+
+span.glossaryLink, a.glossaryLink {
+  cursor: help;
+  color: #222 !important;
+  border-bottom: dotted 1px hsla(358, 85%, 52%, 0.4) !important;
+}
+.carousel span.glossaryLink, .carousel  a.glossaryLink {
+  color: #eee !important;
+  border-bottom: dotted 1px hsla(0, 100%, 100%, 0.2) !important;
+}
+a.glossaryLink:hover {
+  cursor: help;
+  color: blue !important;
+  border-bottom: dotted 1px blue !important;
+}
+#tt {position:absolute; display:block;z-index:9999;}
+
+#tt {
+  color: white !important;
+  font-family: sans-serif !important;
+  font-size: 12px !important;
+}
+#tt * {
+  font-family: sans-serif !important;
+  font-size: 14px !important;
+  color: white !important;
+  margin: 0 !important;
+  line-height: 1.3 !important;
+  padding: 4px !important;
+}
+
+/*
+  woocommerce
+
+*/
+
+.woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals {
+  width: 66%;
+}
+.woocommerce-cart .cart-collaterals .cart_totals table td, .woocommerce-cart .cart-collaterals .cart_totals table th {
+  padding: 6px 10px;
+}
+
+.woocommerce div.product p.price ins, .woocommerce div.product span.price ins,
+.woocommerce ul.products li.product .price ins {
+  text-decoration: none;
+  margin: -2em 0 0 1em;
+}
+
+.woocommerce div.product p.price del, .woocommerce div.product span.price del,
+.woocommerce ul.products li.product .price del {
+  float: left;
+}
+
+.woocommerce div.product p.price, .woocommerce div.product span.price {
+  color: #77A464;
+  font-size: 2.25em;
+}
+
+.woocommerce div.product form.cart .button {
+  margin-top: 7px;
+}
+
+.woocommerce ul.products li.product .price {
+  font-size: 1.5em;
+}
+.woocommerce ul.products li.product h3 {
+  min-height: 3em;
+  font-size: 1.1em;
+}
+
+.woocommerce ul.products li.product a img {
+  width: auto;
+  height: auto;
+}
+
+.woocommerce ul.products li.product-category h3 {
+  font-size: 2em;
+}
+
+.woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images {
+  float: left;
+  width: 25%;
+}
+.woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce-page div.product div.summary {
+  float: right;
+  width: 70%;
+}
+
+.loading {
+  min-height: 0px;
+}
+
+.woocommerce .woocommerce-ordering select {
+  width: auto
+}
+
+.woocommerce ul.products li.product a img {
+  border: 4px solid #EEE;
+}
+
+.product-halbedelsteine-2.woocommerce ul.products li.product a img {
+  border-color: transparent !important;
+}
+
+.woocommerce ul.products li.product a:hover img{
+  border-color: #ccc;
+}
+
+.woocommerce .container i {
+  color: #444;
+}
+
+/*
+*/
+
+.woocommerce.term-texte ul.products li.product,
+.woocommerce.term-98 ul.products li.product,
+.woocommerce.term-99 ul.products li.product,
+.woocommerce.term-100 ul.products li.product,
+.woocommerce.term-101 ul.products li.product {
+  width: auto;
+  float: none;
+  width: 50%;
+  margin: 0 8px 8px 0px !important;
+  padding: 0 8px;
+  border: 2px solid #DDD;
+  background: #F4F4F4;
+}
+  .woocommerce.term-texte ul.products li.product:hover,
+  .woocommerce.term-98 ul.products li.product:hover,
+  .woocommerce.term-99 ul.products li.product:hover,
+  .woocommerce.term-100 ul.products li.product:hover,
+  .woocommerce.term-101 ul.products li.product:hover {
+    background: #FFFFEA;
+  }
+
+.woocommerce.term-texte ul.products li.product a img,
+.woocommerce.term-98 ul.products li.product a img,
+.woocommerce.term-99 ul.products li.product a img,
+.woocommerce.term-100 ul.products li.product a img,
+.woocommerce.term-101 ul.products li.product a img {
+  display: none;
+}
+
+.woocommerce.term-texte ul.products li.product h3,
+.woocommerce.term-98 ul.products li.product h3,
+.woocommerce.term-99 ul.products li.product h3,
+.woocommerce.term-100 ul.products li.product h3,
+.woocommerce.term-101 ul.products li.product h3 {
+  font-size: 1.2em;
+  min-height: 0;
+}
+
+/*  Kasse
+*/
+
+.woocommerce #payment .terms, .woocommerce-page #payment .terms {
+  text-align: right;
+  width: 70%;
+}
+.woocommerce form .form-row .input-checkbox {
+  width: 12px;
+  height: 12px;
+  margin: 0px 0px 0 5px;
+  zoom: 2;
+  float: right;
+}
+.woocommerce #payment #place_order, .woocommerce-page #payment #place_order {
+  float: right;
+  top: 25px;
+}
+
+.woocommerce .title h3 {
+  font-size: 1.2em;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.woocommerce-cart .cart-collaterals .cart_totals table {
+  border: 2px solid hsl(0, 0%, 93%);
+}
+
+/*  Search
+*/
+
+div#shop-search {
+  float: right;
+  position: absolute;
+  margin: 28px 28px 0 0;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 180px;
+}
+
+div#shop-search input {
+  width: 90%
+}
+
+/*
+    Event Manager
+
+*/
+
+#em-wrapper .em-categories-list h3 a {
+  color: #639;
+}
+
+#em-wrapper .em-categories-list h3 {
+
+}
+
+ul.em-categories-list li {
+  clear: left;
+  height: 270px;
+  list-style: none;
+}
+
+ul.em-categories-list p {
+  padding: 0;
+}
+
+.categorynotes {
+  float: left;
+  width: 70%;
+  margin: 0 0 0 1em;
+}
+
+.categoryimage {
+  float: left;
+}
+
+/*  Eventlists
+*/
+
+.eventlist li {
+  list-style: none !important;
+  line-height: 1.5em;
+  margin-bottom: .5em;
+}
+
+.eventlist li li {
+  text-indent: 6px;
+}
+
+#legende {
+  margin: 2em;
+}
+
+#legende li {
+  margin-bottom: 0;
+}
+
+ul.eventlist li a {
+  font-weight: bold;
+}
+
+ul.eventlist > li:before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  margin-right: 0.5em;
+  border: 1px solid hsla(0, 0%, 0%, 0.2);
+  border-radius: 100%;
+  display: inline-block;
+}
+
+/*ul#legende li.anfaenger:before,*/
+ul.eventlist li.Anfänger:before,
+ul.eventlist li.anfaenger:before {
+  /*background: #30BE30;*/
+  background: hsl(129, 59%, 49%);
+}
+/*ul#legende li.grundkenntnisse:before,*/
+ul.eventlist li.grundkenntnisse:before {
+  /*background: #FFC800;*/
+  background: hsl(50, 100%, 60%);
+}
+/*ul#legende li.fortgeschrittene:before,*/
+ul.eventlist li.fortgeschrittene:before {
+  /*background: #BE3030;*/
+  background: hsl(2, 96%, 67%);
+}
+
+span.anfaenger:after {
+  content: "Für Anfänger geeignet";
+}
+span.grundkenntnisse:after {
+  content: "Für Personen mit Grundkenntnissen";
+}
+span.fortgeschrittene:after {
+  content: "Für Fortgeschrittene";
+}
+
+a.ref-link {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: -16.8em;
+  margin-bottom: -10px;
+}
+
+table.em-calendar td.eventful a, table.em-calendar td.eventful-today a {
+  color: #5050DB;
+/*  font-size: 14px;*/
+  line-height: 1 !important;
+}
+
+table#small-calendar {
+  background-color: hsl(0, 100%, 100%);
+}
+
+table#small-calendar td.eventful a, table#small-calendar td.eventful-today a {
+/*  font-size: 1em !important;*/
+  width: 36px;
+  padding: 7px 0;
+  display: block;
+}
+
+table#small-calendar td.eventful-today a {
+  color: #EEE;
+}
+
+td.eventless {
+  color: #666;
+}
+
+table#small-calendar td a:hover {
+  background: #F0F0F0;
+  text-decoration: none;
+  color: #ED1C24;
+}
+
+table#small-calendar td.eventful-today a:hover {
+  background: #7979ED;
+  color: #FFF;
+}
+
+table.em-calendar td.eventless-today, table.em-calendar td.eventful-today {
+  background-color: #00A4E9;
+  color: #FFF;
+}
+
+table.em-calendar td {
+  padding: 0;
+  width: 34px;
+  font-size: 15px;
+  vertical-align: middle;
+  text-align: center;
+  border: 1px solid #F0F0F0;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  max-width: 15em;
+  border: 1px solid #333;
+  background-color: rgba(237, 29, 35, 0.9);
+  border-radius: 3px;
+  padding: 6px;
+  color: #fff;
+  font: normal 12px/18px sans-serif;
+}
+
+table.events-table tr td {
+  padding-top: 1em;
+}
+
+table.events-table tr {
+  border-bottom: 1px solid #DDD;
+}
+
+/*  Events List Day
+*/
+
+.page-veranstaltungen h1.headline {
+  font-size: 2em;
+}
+
+.page-veranstaltungen table thead th {
+  text-align: left;
+  padding-left: 12px;
+}
+
+table.events-table tr td {
+  line-height: 1;
+}
+
+table.events-table tr:nth-child(even) {
+  background: #FFFCEE;
+}
+
+table th {
+  background: #FFF6CB;
+}
+
+/*
+    pages
+
+*/
+
+.page-id-896 .pt-cv-thumbnail {
+  -webkit-filter: grayscale(1);
+  -ms-filter: grayscale(1);
+  -o-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+/*  http://drikung-aachen.de/unser-zentrum/aktivitaeten/ */
+
+.page-id-889 .pt-cv-title a {
+  font-weight: 300;
+  font-size: 26px;
+}
+.page-id-889 .pt-cv-content {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 2;
+}
+
+.page-id-889 .col-sm-6, .page-id-889 .col-md-6 {
+    padding-left: 0;
+}
