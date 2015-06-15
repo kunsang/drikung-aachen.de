@@ -216,6 +216,12 @@ ul.pt-cv-pagination {
   left: -20px;
 }
 
+.btn-success {
+  color: #FFF !important;
+  background-color: #428BCA;
+  border-color: #004A75;
+}
+
 /*  Slider
 */
 
@@ -566,6 +572,13 @@ div#shop-search {
 
 div#shop-search input {
   width: 90%
+}
+
+/*  Widget in navbar
+*/
+
+.widget .total {
+  color: #FFF;
 }
 
 /*
