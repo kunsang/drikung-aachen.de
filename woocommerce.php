@@ -1,44 +1,32 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Page Template
+ *
+ * This template is the default page template. It is used to display content when someone is viewing a
+ * singular view of a page ('page' post_type) unless another page template overrules this one.
+ * @link http://codex.wordpress.org/Pages
+ *
+ * @package WooFramework
+ * @subpackage Template
+ */
 
-<!-- BEGIN .container -->
-<div class="container">
+get_header();
+?>
 
-	<?php if ( has_post_thumbnail()) { ?>
-		<div class="feature-img page"><?php the_post_thumbnail( 'featured-large' ); ?></div>
-	<?php } else { ?>
-		<div class="feature-img page"><img src="<?php bloginfo('template_directory'); ?>/images/default-page.png" alt="<?php the_title(); ?>" /></div>
-	<?php } ?>
+    <!-- #content Starts -->
+	<?php woo_content_before(); ?>
+    <div id="content" class="col-full woocommerce-page">
 
-	<!-- BEGIN .row -->
-	<div class="row">
+	    <!-- #main Starts -->
+	    <?php woo_main_before(); ?>
+	    <section id="main">
 
-		<!-- BEGIN .eight columns -->
-		<div class="twelve columns">
+	    <?php woo_loop_before(); ?>
 
-			<!-- BEGIN .postarea -->
+			<?php woocommerce_content(); ?>
 
-<!-- 		//	<?php echo do_shortcode( '[woocommerce_product_search]' ); ?> -->
+		</section><!-- /#main -->
 
-			<div class="page postarea full hentry type-page">
-				<?php woocommerce_content(); ?>
-			<!-- END .postarea -->
-			</div>
-
-		<!-- END .eight columns -->
-		</div>
-
-<!-- 		<div class="four columns">
-			<div class="sidebar">
-			/*	<?php get_sidebar( 'right-sidebar' ); ?> */
-			</div>
-		</div> -->
-
-
-
-	<!-- END .row -->
 	</div>
-
-<!-- END .container -->
-</div>
 
 <?php get_footer(); ?>

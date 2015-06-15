@@ -18,7 +18,15 @@ html {
 
 */
 
-.home .entry-title {display: none}
+.home .entry-title,
+.home .breadcrumb {
+  display: none
+}
+
+.home .pt-cv-scrollable {
+    margin-top: 0;
+    margin-bottom: 0;
+}
 
 .home blockquote {
   margin: 0 0 2em;
@@ -96,6 +104,13 @@ span.first-word {
 
 #navigation {margin-bottom: 24px}
 
+/*  Breadcrumbs
+*/
+
+.breadcrumb {
+  margin-bottom: 1.5em;
+}
+
 /*
   Typograpghy
 
@@ -163,6 +178,15 @@ table p {
   Content Views
 
 */
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.pt-cv-2-col .pt-cv-title {
+  display: block;
+}
 
 .pagination > li > a, .pagination > li > span {
   cursor: pointer;
@@ -238,7 +262,7 @@ ul.pt-cv-pagination {
 .pt-cv-view .carousel-control.right {right: 0}
 
 .pt-cv-view .carousel-caption {
-  bottom: 25px;
+  bottom: 25px !important;
 }
 
 .carousel img {
@@ -254,7 +278,9 @@ ul.pt-cv-pagination {
   color: #FFF;
   background: hsl(208, 57%, 33%);
 }
-
+.pt-cv-scrollable .pt-cv-title {
+  margin-bottom: 0 !important;
+}
 /*
   Google Maps Builder
 
@@ -441,7 +467,7 @@ a.glossaryLink:hover {
   font-size: 1.5em;
 }
 .woocommerce ul.products li.product h3 {
-  min-height: 3em;
+/*  min-height: 3em;*/
   font-size: 1.1em;
 }
 
@@ -475,7 +501,7 @@ a.glossaryLink:hover {
   border: 4px solid #EEE;
 }
 
-.product-halbedelsteine-2.woocommerce ul.products li.product a img {
+.post-type-archive-product ul.products li.product a img {
   border-color: transparent !important;
 }
 
@@ -592,6 +618,10 @@ div#shop-search input {
 
 #em-wrapper .em-categories-list h3 {
 
+}
+
+ul.em-categories-list {
+  padding: 0;
 }
 
 ul.em-categories-list li {
@@ -784,11 +814,18 @@ table th {
 
 */
 
-.page-id-896 .pt-cv-thumbnail {
-  -webkit-filter: grayscale(1);
-  -ms-filter: grayscale(1);
-  -o-filter: grayscale(1);
+/*  page-lehrer-referenten
+*/
+
+.page-lehrer-referenten .pt-cv-thumbnail {
+  border: 3px solid rgba(237, 54, 60, 0.5) !important;
+  border-radius: 50%;
   filter: grayscale(1);
+}
+
+.page-lehrer-referenten .pt-cv-row:hover img.pt-cv-thumbnail {
+  border: 3px solid var(--red) !important;
+  filter: grayscale(0);
 }
 
 /*  http://drikung-aachen.de/unser-zentrum/aktivitaeten/ */
@@ -800,9 +837,9 @@ table th {
 .page-id-889 .pt-cv-content {
   font-size: inherit;
   font-weight: inherit;
-  line-height: 2;
 }
 
 .page-id-889 .col-sm-6, .page-id-889 .col-md-6 {
     padding-left: 0;
 }
+

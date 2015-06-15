@@ -76,7 +76,7 @@
 				</g></svg>
 		<h1 id="custom-header">
 			<a href="<?php echo get_option('home'); ?>/" title="Home">
-				<span class="first-word">Drikung</span>Sherab Migched Ling<br><span id="header-desc">
+				<span class="first-word">Drikung</span> Sherab Migched Ling<br><span id="header-desc">
 				<?php bloginfo( 'description' ); ?></span>
 			</a>
 		</h1>
