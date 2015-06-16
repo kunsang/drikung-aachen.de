@@ -120,6 +120,10 @@ h1.title {
   padding: 10px 0 0;
 }
 
+h2 {
+  border-bottom: 1px dotted #B3B3B3;
+}
+
 blockquote {
   color: #444;
   font-size: 1.2em;
@@ -130,9 +134,13 @@ blockquote {
   margin-top: -50px !important;
 }
 
-.btn:hover, .reply a:hover, #searchsubmit:hover, #prevLink a:hover, #nextLink a:hover, .more-link:hover, #submit:hover, #comments #respond input#submit:hover, .container .gform_wrapper input.button:hover {
-  background: #30307c;
+a.button, a.comment-reply-link, #commentform #submit, .submit, input[type=submit], input.button, button.button, #wrapper .woo-sc-button {
+  font-weight: 400;
 }
+
+/*.btn:hover, .reply a:hover, #searchsubmit:hover, #prevLink a:hover, #nextLink a:hover, .more-link:hover, #submit:hover, #comments #respond input#submit:hover, .container .gform_wrapper input.button:hover {
+  background: #30307c;
+}*/
 
 blockquote {
   font-size: 1em;
@@ -179,10 +187,10 @@ table p {
 
 */
 
-.row {
+/*.row {
   margin-left: 0;
   margin-right: 0;
-}
+}*/
 
 .pt-cv-2-col .pt-cv-title {
   display: block;
