@@ -13,20 +13,20 @@
 get_header();
 ?>
 
-    <!-- #content Starts -->
-	<?php woo_content_before(); ?>
-    <div id="content" class="col-full woocommerce-page">
+<!-- #content Starts -->
+<?php woo_content_before(); ?>
+<div id="content" class="col-full woocommerce-page">
 
-	    <!-- #main Starts -->
-	    <?php woo_main_before(); ?>
-	    <section id="main">
+	<!-- #main Starts -->
+	<?php woo_main_before(); ?>
+	<section id="main">
 
-	    <?php woo_loop_before(); ?>
+		<?php woo_loop_before(); ?>
 
-			<?php woocommerce_content(); ?>
+		<?php woocommerce_content(); ?>
 
-		</section><!-- /#main -->
+	</section><!-- /#main -->
 
-	</div>
+</div>
 
 <?php get_footer(); ?>
