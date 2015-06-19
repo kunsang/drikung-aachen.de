@@ -104,6 +104,11 @@ span.first-word {
 
 #navigation {margin-bottom: 24px}
 
+.searchform input.s, #searchform input#s,
+#navigation ul.nav-search #searchform .submit:before, #navigation ul.nav-search .searchform .submit:before {
+  color: #FFF !important;
+}
+
 /*  Breadcrumbs
 */
 
