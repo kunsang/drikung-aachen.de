@@ -8,7 +8,7 @@
 --red: hsl(358, 85%, 52%);
 }
 
-html {
+html, body {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
 }
@@ -47,11 +47,6 @@ html {
 
 */
 
-#header {
-  margin: 0;
-  padding: 30px 0 0;
-}
-
 #custom-header {
   display: inline-block;
   margin: 0 0 0 8px;
@@ -70,6 +65,7 @@ html {
 
 h1#custom-header a {
   text-transform: uppercase;
+  letter-spacing: -2px;
   color: var(--blue);
 }
 
@@ -80,9 +76,10 @@ h1#custom-header a {
   }
 
 span#header-desc {
-  font-size: 18px;
   top: -1em;
   position: relative;
+  font-size: 18px;
+  letter-spacing: 0px;
   color: var(--blue);
 }
 
@@ -192,12 +189,8 @@ table p {
 
 */
 
-/*.row {
-  margin-left: 0;
-  margin-right: 0;
-}*/
-
-.pt-cv-2-col .pt-cv-title {
+.pt-cv-2-col .pt-cv-title,
+.pt-cv-view .pt-cv-2-col .pt-cv-title {
   display: block;
 }
 
@@ -311,13 +304,6 @@ html .map-icon-art-gallery:before {
 html i.map-icon-art-gallery {
   top: -4px !important;
 }
-
-/*
-  Posts
-
-*/
-
-
 
 /*
   Sidebar
@@ -723,8 +709,8 @@ a.ref-link {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  text-indent: -16.8em;
-  margin-bottom: -10px;
+  text-indent: -13.8em;
+  margin-bottom: -6px;
 }
 
 table.em-calendar td.eventful a, table.em-calendar td.eventful-today a {
@@ -823,6 +809,15 @@ table th {
 }
 
 /*
+    posts
+
+*/
+
+.post-entries {
+   display: none;
+}
+
+/*
     pages
 
 */
@@ -856,3 +851,15 @@ table th {
     padding-left: 0;
 }
 
+/*  Print Styles  */
+
+@media print {
+  #sidebar, #comments, form.cart,
+  div.breadcrumb, div.post-entries,  div.related.products,
+  a.nav-home, #navigation, #header, .nav-toggle {
+    display: none !important;
+  }
+  span.glossaryLink, a.glossaryLink {
+    border-bottom: none !important;
+    }
+  }

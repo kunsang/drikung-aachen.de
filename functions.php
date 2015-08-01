@@ -169,3 +169,76 @@ function my_em_hide_recurr($events, $args){
     }
     return $events;
 }
+
+//  Google Analytics
+
+add_action('wp_footer', 'add_google_analytics');
+function add_google_analytics() { ?>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62503411-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<?php }
+
+//  Lehrer Custom Post Type
+
+function lehrer_custom_post_type() {
+
+$labels = array(
+'name' => _x( 'Lehrer', 'Post Type General Name', 'text_domain' ),
+'singular_name' => _x( 'Lehrer', 'Post Type Singular Name', 'text_domain' ),
+'menu_name' => __( 'Lehrer', 'text_domain' ),
+'parent_item_colon' => __( 'Parent Information:', 'text_domain' ),
+'all_items' => __( 'Alle Lehrer', 'text_domain' ),
+'view_item' => __( 'Lehrer anzeigen', 'text_domain' ),
+'add_new_item' => __( 'Neuen Lehrer hinzufügen', 'text_domain' ),
+'add_new' => __( 'Neuer Lehrer', 'text_domain' ),
+'edit_item' => __( 'Lehrer bearbeiten', 'text_domain' ),
+'update_item' => __( 'Lehrer aktualisieren', 'text_domain' ),
+'search_items' => __( 'Lehrer suchen', 'text_domain' ),
+'not_found' => __( 'Kein Lehrer gefunden', 'text_domain' ),
+'not_found_in_trash' => __( 'Kein Lehrer im Papierkorb gefunden', 'text_domain' ),
+);
+$rewrite = array(
+'slug' => 'lehrer',
+'with_front' => true,
+'pages' => true,
+'feeds' => true,
+);
+$args = array(
+'label' => __( 'lehrer', 'text_domain' ),
+'description' => __( 'Lehrer und ReferentInnen', 'text_domain' ),
+'labels' => $labels,
+'supports' => array( 'title', 'editor', 'thumbnail', 'comments', 'revisions', 'custom-fields', 'post-formats', ),
+'taxonomies' => array( 'category', 'post_tag' ),
+'hierarchical' => true,
+'public' => true,
+'show_ui' => true,
+'show_in_menu' => true,
+'show_in_nav_menus' => true,
+'show_in_admin_bar' => true,
+'menu_position' => 5,
+'menu_icon' => '/dashicons-admin-users',
+'can_export' => true,
+'has_archive' => false,
+'exclude_from_search' => false,
+'publicly_queryable' => true,
+'rewrite' => $rewrite,
+'capability_type' => 'page',
+);
+register_post_type( 'products', $args );
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'custom_post_type', 0 );
+
+}
