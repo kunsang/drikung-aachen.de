@@ -365,10 +365,11 @@ a.button, a.comment-reply-link, #commentform #submit, .submit, input[type=submit
 }
   #sidebar ul.menu li {
     margin: 0;
-    width: 90%;
+    width: 100%;
   }
   #sidebar ul.menu li a {
     color: #ED1C24;
+    font-size: 15px;
   }
 
 #sidebar ul.menu li.first-level {
@@ -815,6 +816,10 @@ table th {
 
 .post-entries {
    display: none;
+}
+
+.nocomments {
+  display: none;
 }
 
 /*
