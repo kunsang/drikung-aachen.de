@@ -140,3 +140,25 @@ function my_em_hide_recurr($events, $args){
     }
     return $events;
 }
+
+// get first future recurrence events
+
+function is_no_recurrence($evt) {
+    return $evt->recurrence_id == null;
+}
+
+function nextRecurrences($evts) {
+
+	$nextRecurrences = array();
+
+	foreach ($evts as $evt) {
+		array_push($nextRecurrences,reset(nextRecurrenceOf($evt)));
+	}
+
+    return $nextRecurrences;
+}
+
+function nextRecurrenceOf($evt){
+
+	return EM_Events::get(array('recurrence_id'=>$evt->event_id, 'limit'=>1, 'scope'=>'future', 'orderby'=>'event_start_date', 'order'=>'ASC'));
+}

@@ -595,7 +595,7 @@ div#shop-search input {
 /*  Widget in navbar
 */
 
-.widget .total, .widget_shopping_cart_content, .widget p, .widget .textwidget {
+.widget .total {
   color: #FFF;
 }
 
